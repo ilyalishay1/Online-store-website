@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Training program from Artem Yakimovich</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'program/image/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'program/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'program/css/extra-plus-large-screen-style.css' %}">
+    <link rel="stylesheet" href="{% static 'program/css/extra-plus-plus-large-screen-style.css' %}">
+    <style>
+         html {
+            background-image: url({% static 'program/image/order-background.jpeg' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 100vh
+        }
+
+        .order-info-block-img {
+            background-image: url({% static 'program/image/order-background.jpeg' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<div class="order-container">
+    <div class="order-info-block">
+        <div class="order-info-block-img">
+            <img src="{% static 'program/image/order-block-img.jpeg' %}" class="order-info-block-second-img">
+        </div>
+        <div class="order-info-block-text">
+            <br>
+            <h4>Training program from Artem Yakimovich</h4>
+            <p>Order a training program</p>
+        </div>
+    </div>
+    <div class="order-form-block">
+        <div class="order-form-block-text">
+            <span class="black-span">Amount</span><br>
+            <span class="color-span">2390 UAH</span>
+        </div>
+        <div class="dashed-line"></div>
+        <div class="order-form-block-form">
+            <form method="post">
+                {% csrf_token %}
+                <div class="order-form-full-length-form">
+                        <p>{{form.card_number.label_tag}}</p>
+                    <div class="order-form-form-field-center">
+                        {{form.card_number}}
+                    </div>
+                </div>
+                <div class="order-form-right-length-form">
+                    <p>{{form.expiration_date.label_tag}}</p>
+                    <div class="order-form-form-field">
+                        {{form.expiration_date}}
+                    </div>
+                </div>
+                <div class="order-form-left-length-form">
+                    <p>{{form.cvv.label_tag}}</p>
+                    <div class="order-form-form-field">
+                        {{form.cvv}}
+                    </div>
+                </div>
+                <div class="order-form-full-length-form">
+                    <p>{{form.owner_name.label_tag}}</p>
+                    <div class="order-form-form-field-center">
+                        {{form.owner_name}}
+                    </div>
+                </div>
+                <div class="order-form-right-length-form">
+                    <p>{{form.phone_number.label_tag}}</p>
+                    <div class="order-form-form-field">
+                        {{form.phone_number}}
+                    </div>
+                </div>
+                <div class="order-form-left-length-form">
+                    <p>{{form.email.label_tag}}</p>
+                    <div class="order-form-form-field">
+                        {{form.email}}
+                    </div>
+                </div>
+                <div class="order-form-btn-container">
+                    <input type="submit" value="Checkout" class="order-form-button">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,432 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Программы тренировок от Artem Yakimovich</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'program/image/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'program/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'program/css/extra-plus-large-screen-style.css' %}">
+    <link rel="stylesheet" href="{% static 'program/css/extra-plus-plus-large-screen-style.css' %}">
+    <style>
+        .main-block {
+            background-image: url({% static 'program/image/main-background.jpeg' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 100vh
+        }
+
+        .start-now-block {
+            background-image: url({% static 'program/image/start-now-background.jpg' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 90vh
+        }
+
+        .cost-block {
+            background-image: url({% static 'program/image/cost-background.jpeg' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 110vh
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="header-main-logo">AY</p>
+        <p class="header-logo">Artem Yakimovich</p>
+        <ul class="header-links">
+            <li><a href="#advantages">Преимущества</a></li>
+                <li><a href="#what-include">Что входит</a></li>
+                <li><a href="#how-looks">Как выглядит</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#cost">Стоимость</a></li>
+        </ul>
+        <button type="button" onclick="document.location='#cost'" class="header-button">Заказать</button>
+        <a href="https://www.instagram.com/_teeemgo_/"><img src="{% static 'program/image/svg/instagram-logo.svg' %}" class="header-inst-link"></a>
+    </div>
+<div class="main-block">
+    <button type="button" class="toggle-menu">&#9776;</button>
+    <p class="main-block-span-text animation">
+        <span class="main-block-color-text">Твоя</span><br>
+        <span class="main-block-color-text">Программа</span><br>
+        <span class="main-block-color-text">Тренировок</span>
+    </p>
+    <p class="main-block-p animation">План тренировок и питания, составленные по<br>
+        научным исследованиям
+    </p>
+    <button type="button" onclick="document.location='#advantages'" class="main-block-button">УЗНАТЬ ПОДРОБНЕЕ</button>
+</div>
+<div id="advantages" class="advantages-block">
+    <p class="new-block-p animation"> ─ Почему я?</p>
+    <p class="advantages-block-span-text animation">
+        <span class="advantages-block-color-text">Преимущества</span><br>
+        <span class="advantages-block-white-text">Программы</span>
+    </p>
+    <div class="advantages-block-blocks">
+        <div class="advantages-block-block animation">
+            <img src="{% static 'program/image/svg/benefits-icon1.svg' %}" class="advantages-block-block-img">
+            <p class="advantages-block-main-text">ИНДИВИДУАЛЬНАЯ</p>
+            <p class="advantages-block-secondary-text">Программа составляется для каждого индивидуально,
+                исходя из данных человека, которые он укажет в анкете на сайте
+                . Это не стандартный план для всех из первой выдачи в Google.</p>
+        </div>
+        <div class="advantages-block-block animation">
+            <img src="{% static 'program/image/svg/benefits-icon2.svg' %}" class="advantages-block-block-img">
+            <p class="advantages-block-main-text">ПОДРОБНАЯ</p>
+            <br>
+            <p class="advantages-block-secondary-text">Ты получаешь не просто список упражнений,
+                а очень подробный и обширный файл,
+                где расписан каждый нюанс тренировок
+                и питания.</p>
+        </div>
+        <div class="advantages-block-block animation">
+            <img src="{% static 'program/image/svg/benefits-icon3.svg' %}" class="advantages-block-block-img">
+            <p class="advantages-block-main-text">ПЛАН НА 4 МЕСЯЦА</p>
+            <p class="advantages-block-secondary-text">Упражнения расписаны на целый месяц (1 цикл).
+                Этот цикл можно повторять.
+                Советую проходить 4 цикла (4 месяца)
+                и менять программу, чтобы организм не привыкал.</p>
+        </div>
+        <div class="advantages-block-block animation">
+            <img src="{% static 'program/image/svg/benefits-icon4.svg' %}" class="advantages-block-block-img">
+            <p class="advantages-block-main-text">НАУЧНО ПОДТВЕРЖДЕНО</p>
+            <p class="advantages-block-secondary-text">Программа строится исходя из моего
+                10-летнего стажа натуральных тренировок.
+                А также исходя современных научных исследований
+                в сфере фитнеса и телостроительства.</p>
+        </div>
+    </div>
+</div>
+<div class="start-now-block">
+    <p class="new-block-p animation"> ─ Начни прямо сейчас</p>
+    <p class="start-now-block-text animation">
+        <span class="start-now-block-white-text">Начинай</span>
+        <span class="start-now-block-color-text">менять свое</span><br>
+        <span class="start-now-block-color-text">тело</span>
+        <span class="start-now-block-white-text">Грамотно и</span><br>
+        <span class="start-now-block-white-text">эффективно</span>
+    </p>
+    <button type="button" onclick="document.location='#cost'" class="main-button">Начать</button>
+</div>
+<div id="what-include" class="include-block">
+    <p class="new-block-p animation"> ─ Подробная</p>
+    <p class="include-block-span-text animation">
+        <span class="include-block-color-text">Что входит</span><br>
+        <span class="include-block-white-text">в программу?</span>
+    </p>
+    <div class="include-block-lists">
+        <div class="include-block-list animation">
+            <p class="include-block-list-title">Тренировки</p>
+            <ul class="include-block-list-upper animation">
+                <li>Рекомендации по принципам тренировок, режиму дня</li>
+                <li>Комментарии по выполнению к каждому упражнению</li>
+                <li>В каждом упражнении указаны отказные и неотказные подходы</li>
+                <li>Расписанные тренировочные сплиты с соблюдением периодизации</li>
+            </ul>
+            <div class="bottom-line"></div>
+            <ul class="include-block-list-upper animation">
+                <li>Готовые ответы на часто задаваемые вопросы</li>
+                <li>Разнообразные упражнения от недели к неделе</li>
+                <li>Ссылки на видео с техникой выполнения всех упражнений</li>
+                <li>Время отдыха между подходами указывается отдельно для каждого упражнения</li>
+            </ul>
+        </div>
+        <div class="include-block-list animation">
+            <p class="include-block-list-title">Питание</p>
+            <ul class="include-block-list-upper animation">
+                <li>Расписанные БЖУ под твою цель тренировок</li>
+                <li>Распределение БЖУ для каждого приема в течение дня</li>
+                <li>Автоматический счетчик БЖУ и калорий твоего рациона прямо в программе</li>
+            </ul>
+            <div class="bottom-line-2"></div>
+            <ul class="include-block-list-upper animation">
+                <li>Рекомендации по принципам питания</li>
+                <li>Примеры из чего и как составлять рацион</li>
+                <li>Информация и правила приема эффективных позиций спортивного питания</li>
+            </ul>
+        </div>
+    </div>
+    <div class="include-block-blue-section">
+        <div class="include-block-blue-section-text">
+            <p class="include-block-blue-section-title animation">Важно!</p>
+            <p class="include-block-blue-section-p animation">Программа тренировок составляется только для
+                тренажерного зала или же при наличии спортивного
+                инвентаря дома. Минимально необходимый инвентарь -
+                регулируемая скамья и разборные гантели (минимум по 25
+                кг каждая). План тренировок только для тренировок со
+                своим весом не составляю.</p>
+        </div>
+        <div class="include-block-blue-section-image animation">
+            <img src="{% static 'program/image/barbell.png' %}" class="blue-section-img">
+        </div>
+    </div>
+</div>
+<div id="how-looks" class="looks-block">
+    <div class="looks-block-slider">
+        <div class="slider middle animation">
+            <div class="slides">
+                <input type="radio" name="r" id="r1" checked>
+                <input type="radio" name="r" id="r2">
+                <input type="radio" name="r" id="r3">
+                <input type="radio" name="r" id="r4">
+                <input type="radio" name="r" id="r5">
+
+                <div class="slide s1"><img src="{% static 'program/image/looks-slider/looks-slider-1.jpg' %}" alt=""></div>
+                <div class="slide"><img src="{% static 'program/image/looks-slider/looks-slider-2.jpg' %}" alt=""></div>
+                <div class="slide"><img src="{% static 'program/image/looks-slider/looks-slider-3.jpg' %}" alt=""></div>
+                <div class="slide"><img src="{% static 'program/image/looks-slider/looks-slider-4.jpg' %}" alt=""></div>
+                <div class="slide"><img src="{% static 'program/image/looks-slider/looks-slider-5.jpg' %}" alt=""></div>
+            </div>
+
+            <div class="navigation">
+                <label for="r1" class="bar"></label>
+                <label for="r2" class="bar"></label>
+                <label for="r3" class="bar"></label>
+                <label for="r4" class="bar"></label>
+                <label for="r5" class="bar"></label>
+            </div>
+        </div>
+    </div>
+    <div class="looks-block-text animation">
+        <p class="new-block-p"> ─ Как выглядит программа?</p>
+        <p class="include-block-span-text">
+            <span class="include-block-color-text">Как выглядит</span><br>
+            <span class="include-block-white-text">Программа?</span>
+        </p>
+        <p class="looks-block-text-p">Программа разрабатывается в формате Excel. Так как я использую
+            много формул и даю много информации в своих программах. Над
+            созданием такого обширного файла я работал в сумме 2 года,
+            постоянно улучшая его. Ты получишь самую подробную и
+            эффективную программу, которых не получал раньше.</p>
+        <button type="button" onclick="document.location='#cost'" class="main-button looks-btn">Заказать программу</button>
+    </div>
+</div>
+<div class="long-line"></div>
+<div class="reviews-block">
+    <div id="reviews" class="reviews-block-text">
+        <p class="new-block-p animation"> ─ Результаты</p>
+        <p class="include-block-span-text animation">
+            <span class="include-block-color-text">Отзывы</span>
+            <span class="include-block-white-text">Клиентов</span>
+        </p>
+        <p class="reviews-block-text-p animation">
+            Все люди разные и требуют индивидуального подхода к тренировкам.
+            Учитывая мой 11-ти летний стаж натуральных тренировок, я стараюсь
+            разрабатывать максимально эффективные программы для людей.
+            <br>
+            <br>
+            Вы не увидите липовых отзывов, где человек за месяц превращается из худого
+            в химического халка. Вся моя работа построена на честности, совести и
+            стремлении помочь людям в достижении их целей в телостроительстве.
+        </p>
+        <button type="button" onclick="#" class="main-button">Больше в Instagram</button>
+    </div>
+    <div class="reviews-block-slider">
+        <div class="reviews-slider middle animation">
+            <div class="reviews-slides">
+                <input type="radio" name="r" id="r6" checked>
+                <input type="radio" name="r" id="r7">
+                <input type="radio" name="r" id="r8">
+                <input type="radio" name="r" id="r9">
+
+                <div class="reviews-slide s1"><img src="{% static 'program/image/reviews-slider/reviews-slide-1.png' %}" alt=""></div>
+                <div class="reviews-slide"><img src="{% static 'program/image/reviews-slider/reviews-slide-2.png' %}" alt=""></div>
+                <div class="reviews-slide"><img src="{% static 'program/image/reviews-slider/reviews-slide-3.png' %}" alt=""></div>
+                <div class="reviews-slide"><img src="{% static 'program/image/reviews-slider/reviews-slide-4.png' %}" alt=""></div>
+            </div>
+
+            <div class="navigation">
+                <label for="r6" class="bar"></label>
+                <label for="r7" class="bar"></label>
+                <label for="r8" class="bar"></label>
+                <label for="r9" class="bar"></label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="reviews-block-section">
+        <div class="reviews-block-section-block animation">
+            <p class="reviews-section-number">01</p>
+            <div class="reviews-number-line"></div>
+            <p class="reviews-section-text">
+                <span>ОПЛАТИ</span><br>
+                <span>ПРОГРАММУ</span><br>
+                <span>НА САЙТЕ</span>
+            </p>
+        </div>
+        <div class="reviews-block-section-block animation">
+            <p class="reviews-section-number">02</p>
+            <div class="reviews-number-line"></div>
+            <p class="reviews-section-text">
+                <span>ЗАПОЛНИ</span><br>
+                <span>АНКЕТУ С</span><br>
+                <span>ДАННЫМИ</span>
+            </p>
+        </div>
+        <div class="reviews-block-section-block animation">
+            <p class="reviews-section-number">03</p>
+            <div class="reviews-number-line"></div>
+            <p class="reviews-section-text">
+                <span>СОСТАВЛЮ</span><br>
+                <span>ПРОГРАММУ В</span><br>
+                <span>ТЕЧЕНИЕ 7-МИ</span><br>
+                <span>ДНЕЙ</span>
+            </p>
+        </div>
+        <div class="reviews-block-section-block animation">
+            <p class="reviews-section-number">04</p>
+            <div class="reviews-number-line"></div>
+            <p class="reviews-section-text">
+                <span>ПЛАН ПРИДЕТ</span><br>
+                <span>ТЕБЕ НА Email</span>
+            </p>
+        </div>
+    <div class="reviews-section-line"></div>
+</div>
+<div class="info-block">
+    <p class="new-block-p animation"> ─ Ваша инфо</p>
+        <p class="include-block-span-text animation">
+            <span class="include-block-color-text">Какая инфо</span><br>
+            <span class="include-block-white-text">будет нужна?</span>
+        </p>
+    <div class="info-block-container">
+        <div class="info-block-blocks animation">
+            <div class="info-block-img-blocks">
+                <img src="{% static 'program/image/info-block-svg/height.svg' %}">
+            </div>
+            <div class="info-block-blocks-p">
+                <p><br>Рост</p>
+            </div>
+        </div>
+        <div class="info-block-blocks animation">
+            <div class="info-block-img-blocks">
+                <img src="{% static 'program/image/info-block-svg/weight.svg' %}">
+            </div>
+            <div class="info-block-blocks-p">
+                <p><br>Вес</p>
+            </div>
+        </div>
+        <div class="info-block-blocks animation">
+            <div class="info-block-img-blocks">
+                <img src="{% static 'program/image/info-block-svg/age.svg' %}">
+            </div>
+            <div class="info-block-blocks-p">
+                <p><br>Возраст</p>
+            </div>
+        </div>
+        <div class="info-block-blocks animation">
+            <div class="info-block-img-blocks">
+                <img src="{% static 'program/image/info-block-svg/calendar.svg' %}">
+            </div>
+            <div class="info-block-blocks-p">
+                <p><br>Стаж тренировок</p>
+            </div>
+        </div>
+        <div class="info-block-blocks animation">
+            <br>
+            <div class="info-block-img-blocks">
+                <img src="{% static 'program/image/info-block-svg/running.svg' %}">
+            </div>
+            <div class="info-block-blocks-p">
+                <p>Текущая программа тренировок</p>
+            </div>
+        </div>
+        <div class="info-block-blocks animation">
+            <br>
+            <div class="info-block-img-blocks">
+                <img src="{% static 'program/image/info-block-svg/knee-pad.svg' %}">
+            </div>
+            <div class="info-block-blocks-p">
+                <p>Противопо-<br>казания по здоровью</p>
+            </div>
+        </div>
+        <div class="info-block-blocks animation">
+            <br>
+            <div class="info-block-img-blocks">
+                <img src="{% static 'program/image/info-block-svg/fitness.svg' %}">
+            </div>
+            <div class="info-block-blocks-p">
+                <p>Акценты на мышечную группу</p>
+            </div>
+        </div>
+        <div class="info-block-blocks animation">
+            <div class="info-block-img-blocks">
+                <img src="{% static 'program/image/info-block-svg/goal.svg' %}">
+            </div>
+            <div class="info-block-blocks-p">
+                <p><br>Цель тренировок</p>
+            </div>
+        </div>
+        <div class="info-block-blocks animation">
+            <div class="info-block-img-blocks">
+                <img src="{% static 'program/image/info-block-svg/dumbbell.svg' %}">
+            </div>
+            <div class="info-block-blocks-p">
+                <p>Оборудование зала</p>
+            </div>
+        </div>
+        <div class="info-block-blocks animation">
+            <div class="info-block-img-blocks">
+                <img src="{% static 'program/image/info-block-svg/body-scan.svg' %}">
+            </div>
+            <div class="info-block-blocks-p">
+                <p>Фото текущей формы</p>
+            </div>
+        </div>
+        <div class="info-block-blocks animation">
+            <div class="info-block-img-blocks">
+                <img src="{% static 'program/image/info-block-svg/instagram-logo.svg' %}">
+            </div>
+            <div class="info-block-blocks-p">
+                <p>Ссылка на инстаграм</p>
+            </div>
+        </div>
+        <div class="info-block-blocks animation">
+            <div class="info-block-img-blocks">
+                <img src="{% static 'program/image/info-block-svg/email.svg' %}">
+            </div>
+            <div class="info-block-blocks-p">
+                <p><br>Email</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="long-line"></div>
+<div id="cost" class="cost-block">
+    <br>
+    <p class="new-block-p animation"> ─ Стоимость</p>
+        <p class="include-block-span-text animation">
+            <span class="include-block-color-text">Сколько</span><br>
+            <span class="include-block-white-text">стоит?</span>
+        </p>
+    <div class="cost-block-section animation">
+        <br>
+        <p class="cost-block-main-text">ИНДВИДУАЛЬНАЯ ПРОГРАММА ТРЕНИРОВКИ ДЛЯ ТЕБЯ:</p>
+        <p class="cost-block-cost-text">60$</p>
+        <div class="cost-section-line"></div>
+        <br>
+        <p class="cost-block-secondary-text">Индивидуальная программа тренировок на 4
+            месяца, по цене 4х персоналок от тренера в зале,
+            который тренирует, лишь бы быстрее прошел час?
+            Выбор очевиден ;)</p>
+        <button type="button" onclick="document.location='{% url 'order' %}'" class="cost-button">Заказать программу</button>
+    </div>
+</div>
+<script src="{% static 'program/js/header.js' %}"></script>
+<script src="{% static 'program/js/animation.js' %}"></script>
+</body>
+</html>
